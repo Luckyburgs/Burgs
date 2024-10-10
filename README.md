@@ -1,23 +1,22 @@
+import java.util.ArrayList; 
 
-public class DivisionErrorHandling {
+public class assignment01_arrayList {
     public static void main(String[] args) {
-        int numerator = 10;
-        int denominator = 0; 
+        // Create an ArrayList of Strings
+        ArrayList<String> list = new ArrayList<>(); 
 
-        try {
-            // Code that may throw an exception
-            int result = divide(numerator, denominator);
-            System.out.println("Result: " + result);
-        } catch (ArithmeticException e) {
-            // Handle the exception
-            System.out.println("Error: " + e.getMessage());
-        } finally {
-            // Code that runs regardless of an exception
-            System.out.println("Division operation completed.");
-        }
-    } 
+        // Add elements to the ArrayList
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry"); 
 
-    public static int divide(int numerator, int denominator) {
-        return numerator / denominator;
+        // Access elements from the ArrayList
+        System.out.println("Element at index 1: " + list.get(1)); // Access using index 
+
+        // Remove an element
+        list.remove("Banana"); 
+
+        // Display updated list
+        System.out.println("Updated List: " + list);
     }
 }
